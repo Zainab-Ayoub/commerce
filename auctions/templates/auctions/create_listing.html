@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lan='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Create Listing</title>
+</head>        
+<body>
+    <h1>Create a New Listing</h1>
+    <form method='POST'>
+        {% csrf_token %}
+        {% comment %} to render form's fields as paragraphs {% endcomment %}
+        {{form.as_p}}
+        <button type='submit'>Create Listing</button>
+    </form>
+</body>    
+</html>    
