@@ -9,6 +9,7 @@ class AuctionListing(models.Model):
     title = models.CharField(max_length=80)
     description = models.TextField()
     starting_bid = models.DecimalField(max_digits=10, decimal_places=2)
+    current_price = models.DecimalField(max_digits=10, decimal_places=2)
     image_url = models.URLField(blank = True, null = True)
     category = models.CharField(max_length = 80, blank = True, null = True)
 

@@ -73,5 +73,10 @@ def createListing(request):
             return redirect('listings')
     else:
         form = ListingForm() # for GET request display empty form
-    return render(request, 'create_listing.html', {'form': form})            
+    return render(request, 'auctions/create_listing.html', {'form': form})            
             
+def listings(request):
+    listings = AuctionListing.objects.all()
+    return render(request, "auctions/listings.html", {
+        'listings': listings  # sends listings data
+    })            
